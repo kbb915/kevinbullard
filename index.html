@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book Kevin Bullard for keynotes, workshops, business events, retreats, and leadership sessions that help leaders think ahead, make wiser decisions, and execute consistently.">
+  <title>Kevin Bullard | Speaker, Advisor, and Leadership Facilitator</title>
+  <style>
+    :root {
+      --ink: #172028;
+      --soft: #43515c;
+      --muted: #66737c;
+      --paper: #f7f5f0;
+      --white: #fffefa;
+      --line: #d8d3ca;
+      --navy: #10283b;
+      --steel: #315f76;
+      --accent: #c94f32;
+      --accent-dark: #a43c27;
+      --max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Avenir Next", "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    h1, h2, h3, p { text-wrap: pretty; }
+    h1, h2 {
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+      font-weight: 400;
+      letter-spacing: -.035em;
+      line-height: 1.05;
+      margin: 0;
+    }
+    h1 { font-size: clamp(44px, 6vw, 76px); max-width: 760px; }
+    h2 { font-size: clamp(34px, 4.3vw, 54px); }
+    h3 { font-size: 20px; line-height: 1.3; margin: 0 0 8px; }
+    p { color: var(--muted); margin: 0; }
+    .shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding-left: clamp(22px, 4vw, 46px);
+      padding-right: clamp(22px, 4vw, 46px);
+    }
+    .eyebrow {
+      color: var(--steel);
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .button {
+      align-items: center;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: var(--white);
+      display: inline-flex;
+      font-size: 13px;
+      font-weight: 750;
+      gap: 14px;
+      justify-content: center;
+      letter-spacing: .08em;
+      min-height: 52px;
+      padding: 0 22px;
+      text-transform: uppercase;
+      transition: background .2s ease, border-color .2s ease;
+    }
+    .button::after { content: "\2192"; font-size: 17px; font-weight: 400; }
+    .button:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+    .button.ghost { background: transparent; border-color: rgba(255,255,255,.48); }
+    .button.ghost:hover { background: rgba(255,255,255,.1); border-color: var(--white); }
+
+    nav {
+      background: rgba(12, 31, 47, .97);
+      border-bottom: 1px solid rgba(255,255,255,.14);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+    }
+    .nav-inner {
+      align-items: center;
+      display: flex;
+      height: 72px;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-size: 14px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .nav-links { align-items: center; display: flex; gap: 24px; font-size: 14px; }
+    .nav-links a:not(.button) { color: #dce5e9; }
+    .nav-links a:not(.button):hover { color: #fff; }
+
+    .hero {
+      background-color: var(--navy);
+      background-image:
+        linear-gradient(90deg, rgba(12,31,47,.99) 0%, rgba(20,48,66,.94) 48%, rgba(20,48,66,.35) 72%, rgba(20,48,66,.2) 100%),
+        url("https://bullardbusinessexecution.com/assets/kbb-headshot.png");
+      background-position: center, right 12% center;
+      background-repeat: no-repeat;
+      background-size: cover, min(48vw, 620px) auto;
+      color: var(--white);
+      min-height: min(720px, calc(100vh - 72px));
+      display: flex;
+      align-items: center;
+    }
+    .hero-inner { padding-top: 72px; padding-bottom: 72px; width: 100%; }
+    .hero .eyebrow { color: #c4d3da; }
+    .hero-lead { color: #edf3f5; font-size: clamp(18px, 2vw, 22px); line-height: 1.65; margin-top: 24px; max-width: 670px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 32px; }
+
+    section { border-bottom: 1px solid var(--line); }
+    .section-pad { padding-top: clamp(58px, 7vw, 86px); padding-bottom: clamp(58px, 7vw, 86px); }
+    .section-heading {
+      display: grid;
+      gap: clamp(22px, 5vw, 60px);
+      grid-template-columns: minmax(0, .9fr) minmax(280px, .65fr);
+      margin-bottom: clamp(30px, 5vw, 48px);
+    }
+    .section-heading p { color: var(--soft); font-size: 18px; line-height: 1.68; padding-top: 32px; }
+    .formats { background: var(--paper); }
+    .format-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); grid-template-columns: repeat(4, 1fr); }
+    .format { background: var(--white); min-height: 205px; padding: 28px; }
+    .format p { font-size: 15px; line-height: 1.62; }
+    .topics { background: var(--white); }
+    .topic-list { list-style: none; margin: 0; padding: 0; }
+    .topic-list li { border-top: 1px solid var(--line); display: grid; gap: 12px; grid-template-columns: 22px 1fr; padding: 18px 0; }
+    .topic-list li::before { color: var(--accent); content: "\2192"; font-size: 19px; font-weight: 800; }
+    .topic-list strong { font-size: 18px; line-height: 1.4; }
+    .about { background: var(--paper); }
+    .about-copy { max-width: 830px; }
+    .about-copy p { color: var(--soft); font-size: 18px; line-height: 1.72; margin-top: 20px; }
+    .cta { background: linear-gradient(135deg, #0e2233, #1c4057 62%, #0a1c2a); color: var(--white); text-align: center; }
+    .cta .shell { max-width: 840px; }
+    .cta .eyebrow { color: #bed0d9; }
+    .cta p { color: #dce5e9; font-size: 19px; margin: 22px auto 30px; max-width: 680px; }
+    footer { background: #091a28; color: #cdd6da; font-size: 13px; padding: 34px 0; }
+    .footer-inner { display: flex; flex-wrap: wrap; gap: 18px 30px; justify-content: space-between; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a:hover { color: #fff; }
+    .rights { color: #9fb0b9; flex-basis: 100%; }
+
+    @media (max-width: 960px) {
+      .section-heading { grid-template-columns: 1fr; }
+      .section-heading p { padding-top: 0; }
+      .format-grid { grid-template-columns: 1fr 1fr; }
+      .hero { background-image: linear-gradient(90deg, rgba(12,31,47,.99), rgba(20,48,66,.82)), url("https://bullardbusinessexecution.com/assets/kbb-headshot.png"); background-position: center, right -100px center; background-size: cover, 520px auto; }
+    }
+    @media (max-width: 680px) {
+      .nav-links a:not(.button) { display: none; }
+      .nav-links .button { min-height: 44px; padding: 0 15px; }
+      .hero { min-height: auto; background-image: linear-gradient(rgba(12,31,47,.82), rgba(12,31,47,.96)), url("https://bullardbusinessexecution.com/assets/kbb-headshot.png"); background-position: center, center 18%; background-size: cover; }
+      .hero-inner { padding-top: 230px; padding-bottom: 52px; }
+      h1 { font-size: clamp(42px, 13vw, 56px); }
+      h2 { font-size: clamp(34px, 10vw, 46px); }
+      .button { width: 100%; }
+      .format-grid { grid-template-columns: 1fr; }
+      .format { min-height: 0; padding: 22px; }
+      .footer-inner, .footer-links { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <nav aria-label="Primary navigation">
+    <div class="shell nav-inner">
+      <a class="brand" href="#top">Kevin Bullard</a>
+      <div class="nav-links">
+        <a href="#formats">Speaking</a>
+        <a href="#topics">Topics</a>
+        <a href="#about">About</a>
+        <a class="button" href="https://tidycal.com/kevinbullard/discovery-call">Book Kevin</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="shell hero-inner">
+      <span class="eyebrow">Speaker &bull; Advisor &bull; Facilitator</span>
+      <h1>Helping leaders think ahead and execute consistently.</h1>
+      <p class="hero-lead">Kevin Bullard helps leaders move beyond reaction, make wiser decisions, clarify ownership, and build the accountability that keeps work moving.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://tidycal.com/kevinbullard/discovery-call">Book Kevin</a>
+        <a class="button ghost" href="#formats">Explore Speaking</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="formats section-pad" id="formats" aria-labelledby="formats-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Available For</span>
+            <h2 id="formats-title">Keynotes, workshops, business events, and retreats.</h2>
+          </div>
+          <p>Each session gives leaders practical ways to anticipate challenges, make better decisions, and strengthen execution after the event.</p>
+        </div>
+        <div class="format-grid">
+          <article class="format">
+            <h3>Keynotes</h3>
+            <p>Practical talks for conferences, leadership meetings, and company events.</p>
+          </article>
+          <article class="format">
+            <h3>Workshops</h3>
+            <p>Interactive sessions that turn leadership ideas into decisions and action.</p>
+          </article>
+          <article class="format">
+            <h3>Business Events</h3>
+            <p>Focused messages for offsites, annual meetings, forums, and internal gatherings.</p>
+          </article>
+          <article class="format">
+            <h3>Retreats</h3>
+            <p>Facilitation and teaching that help teams step back, think ahead, and align.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="topics section-pad" id="topics" aria-labelledby="topics-title">
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Speaking Topics</span>
+            <h2 id="topics-title">Leadership that anticipates instead of reacts.</h2>
+          </div>
+          <p>Programs can be tailored to your audience, event goals, and the leadership challenges already affecting the business.</p>
+        </div>
+        <ul class="topic-list">
+          <li><strong>Think Ahead: Leading from anticipation instead of reaction</strong></li>
+          <li><strong>Clear Ownership: Helping people understand what they own and what authority they have</strong></li>
+          <li><strong>Accountability Without Micromanagement</strong></li>
+          <li><strong>From Priorities to Progress: Building follow-through that lasts</strong></li>
+          <li><strong>Leading Under Pressure: Recognizing the patterns that shape decisions and performance</strong></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about section-pad" id="about" aria-labelledby="about-title">
+      <div class="shell about-copy">
+        <span class="eyebrow">About Kevin</span>
+        <h2 id="about-title">Practical leadership insight grounded in real organizational work.</h2>
+        <p>Kevin Bullard is a speaker, executive advisor, and the principal of Bullard Business Execution. He brings more than 20 years of experience as a transformational management consultant, chief leadership officer, business owner, and executive advisor.</p>
+        <p>He has led leadership development and execution work inside complex organizations, including a 2,400-employee municipality and large public-company environments.</p>
+      </div>
+    </section>
+
+    <section class="cta section-pad" id="book" aria-labelledby="book-title">
+      <div class="shell">
+        <span class="eyebrow">Bring Kevin In</span>
+        <h2 id="book-title">Start with a conversation about your event.</h2>
+        <p>Talk through your audience, goals, format, and the leadership message you want people to carry forward.</p>
+        <a class="button" href="https://tidycal.com/kevinbullard/discovery-call">Book a Speaking Conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <span class="brand">Kevin Bullard</span>
+      <div class="footer-links">
+        <a href="#formats">Speaking</a>
+        <a href="#topics">Topics</a>
+        <a href="#about">About</a>
+        <a href="https://bullardbusinessexecution.com">Bullard Business Execution</a>
+      </div>
+      <p class="rights">&copy;2026 Kevin Bullard. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
